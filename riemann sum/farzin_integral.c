@@ -4,10 +4,10 @@ int a[100], n;								//global variable, since I need to use them in Calc_exp an
 											//don't want to use pointers
 
 long double fpow(long double x, int y){		//This is fast power function, calculates the x to the power of y
-	long double p = x, ret = 0;				//don't worry about how this works, consider it magic :)
+	long double p = x, ret = 1;				//don't worry about how this works, consider it magic :)
 	while(y){
 		if(y & 1){
-			ret += p;
+			ret *= p;
 		}
 		y >>= 1;
 		p *= x;
